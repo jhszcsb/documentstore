@@ -1,6 +1,8 @@
 package com.toportyu.service;
 
 import com.toportyu.model.Document;
+import com.toportyu.repository.DocumentRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,24 +11,12 @@ import org.springframework.stereotype.Service;
 @Service
 public class DocumentServiceImpl implements DocumentService {
 
+    @Autowired
+    DocumentRepository documentRepository;
+
     @Override
     public Document getDocument() {
-
-        Document document = new Document();
-        document.setId(1l);
-        document.setTitle("Example Document");
-        document.setBody(
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, "
-                        + "sed do eiusmod tempor incididunt ut labore et dolore "
-                        + "magna aliqua. Ut enim ad minim veniam, quis nostrud "
-                        + "exercitation ullamco laboris nisi ut aliquip ex ea "
-                        + "commodo consequat. Duis aute irure dolor in reprehenderit "
-                        + "in voluptate velit esse cillum dolore eu fugiat nulla pariatur. "
-                        + "Excepteur sint occaecat cupidatat non proident, sunt in "
-                        + "culpa qui officia deserunt mollit anim id est laborum.");
-        document.setInternalMessage("This is not visible in the serialized JSON");
-
-        return document;
+        return documentRepository.getDocument();
     }
 
 }
