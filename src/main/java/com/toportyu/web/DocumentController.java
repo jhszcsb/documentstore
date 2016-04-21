@@ -1,5 +1,6 @@
 package com.toportyu.web;
 
+import com.toportyu.model.Document;
 import com.toportyu.service.DocumentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,7 +17,7 @@ public class DocumentController {
     DocumentService documentService;
 
     @RequestMapping(value = "/document", method = RequestMethod.GET)
-    public String getDocument() {
+    public Document getDocument() {
         return documentService.getDocument();
     }
 }

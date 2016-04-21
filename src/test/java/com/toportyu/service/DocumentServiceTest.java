@@ -20,6 +20,6 @@ public class DocumentServiceTest {
 
     @Test
     public void getDocument() {
-        Assert.assertEquals("Dummy document.", documentService.getDocument());
+        Assert.assertEquals("Example Document", documentService.getDocument().getTitle());
     }
 }
