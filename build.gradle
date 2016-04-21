@@ -28,8 +28,5 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
-apply plugin:'application'
-mainClassName = "com.toportyu.main.Main"
-
 // command line run tests: gradle test
-// command line run application: gradle run
+// command line run application: gradle run / gradle bootRun
