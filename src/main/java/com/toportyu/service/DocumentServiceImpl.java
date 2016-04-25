@@ -5,6 +5,8 @@ import com.toportyu.repository.DocumentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 /**
  * Created by csaba.juhasz on 21/04/2016.
  */
@@ -15,8 +17,8 @@ public class DocumentServiceImpl implements DocumentService {
     DocumentRepository documentRepository;
 
     @Override
-    public Document getDocument() {
-        return documentRepository.getDocument();
+    public List<Document> getAllDocuments() {
+        return documentRepository.findAll();
     }
 
 }

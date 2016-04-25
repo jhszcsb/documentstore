@@ -2,11 +2,16 @@ package com.toportyu.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 /**
  * Created by csaba.juhasz on 21/04/2016.
  */
+@Entity
 public class Document {
 
+    @Id
     private long id;
 
     private String title;
