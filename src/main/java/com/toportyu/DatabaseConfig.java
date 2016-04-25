@@ -35,11 +35,11 @@ public class DatabaseConfig {
         LocalSessionFactoryBean sessionFactoryBean = new LocalSessionFactoryBean();
         sessionFactoryBean.setDataSource(dataSource());
 
-        /*Properties hibernateProperties = new Properties();
+        Properties hibernateProperties = new Properties();
         hibernateProperties.put("hibernate.show_sql", true);
         hibernateProperties.put("hibernate.dialect", "org.hibernate.dialect.MySQLDialect");
 
-        sessionFactoryBean.setHibernateProperties(hibernateProperties);*/
+        sessionFactoryBean.setHibernateProperties(hibernateProperties);
         sessionFactoryBean.afterPropertiesSet();
         return sessionFactoryBean;
     }
