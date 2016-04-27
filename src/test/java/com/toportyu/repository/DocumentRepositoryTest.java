@@ -31,6 +31,7 @@ public class DocumentRepositoryTest {
 
     @Test
     public void getDocuments() {
-        Assert.assertEquals(2, documentRepository.findAll().size());
+        List<Document> docs = (List<Document>) documentRepository.findAll();
+        Assert.assertEquals(2, docs.size());
     }
 }

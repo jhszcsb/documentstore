@@ -18,10 +18,6 @@ public class DocumentServiceTest {
     @Autowired
     DocumentService documentService;
 
-    @Test
-    public void getDocument() {
-        //Assert.assertEquals("Example Document", documentService.getDocument().getTitle());
-    }
+    // add tests here when implementing business logic in service class
 
-    // TODO: mock database layer and add tests
 }
