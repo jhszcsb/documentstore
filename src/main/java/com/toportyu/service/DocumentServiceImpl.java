@@ -17,8 +17,12 @@ public class DocumentServiceImpl implements DocumentService {
     DocumentRepository documentRepository;
 
     @Override
-    public List<Document> getAllDocuments() {
+    public Iterable<Document> getAllDocuments() {
         return documentRepository.findAll();
     }
 
+    @Override
+    public void save(Document document) {
+        documentRepository.save(document);
+    }
 }

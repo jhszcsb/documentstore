@@ -7,8 +7,6 @@ import java.util.List;
 /**
  * Created by csaba.juhasz on 21/04/2016.
  */
-public interface DocumentRepository extends org.springframework.data.repository.Repository<Document, Long> {
-
-    public List<Document> findAll();
+public interface DocumentRepository extends org.springframework.data.repository.CrudRepository<Document, Long> {
 
 }
