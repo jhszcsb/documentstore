@@ -25,4 +25,9 @@ public class DocumentServiceImpl implements DocumentService {
     public void save(Document document) {
         documentRepository.save(document);
     }
+
+    @Override
+    public List<Document> findByTitle(String title) {
+        return documentRepository.findByTitle(title);
+    }
 }
